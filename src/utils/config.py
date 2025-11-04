@@ -124,7 +124,7 @@ def load_config(config_file: Optional[str] = None) -> Config:
         file_to_load = config_file
     else:
         # 尝试加载常见的配置文件
-        for config_path in ["config.py", "config.env", ".env"]:
+        for config_path in [".env", "config.env", "config.py"]:
             if os.path.exists(config_path):
                 file_to_load = config_path
                 print(f"已找到配置文件: {config_path}")
